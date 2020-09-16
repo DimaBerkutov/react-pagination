@@ -1,0 +1,142 @@
+@import 'variables';
+@import 'mixin';
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  height: auto;
+  margin: 0;
+  background: $white-color;
+  font: $desktop-font-size / 1.2 $base-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $text-color;
+  letter-spacing: 0.2px;
+}
+
+code {
+  font-family: $code-font;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: $text-color;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+a,
+button {
+  outline: none;
+  @include transition(all, 0.15s);
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+input[type='password'] {
+  font: caption;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+}
+
+select {
+  background: $white-color;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+img,
+svg {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h1 {
+  @include font-size(4.8rem);
+}
+
+h2 {
+  @include font-size(3.2rem);
+}
+
+h3 {
+  @include font-size(2.6rem);
+}
+
+h4 {
+  @include font-size(1.8rem);
+}
+
+h5 {
+  @include font-size(1.4rem);
+}
+
+h6 {
+  @include font-size(1.2rem);
+}
+
+p {
+  @include font-size(1.2rem);
+}
+
+*::selection {
+  background: $white-color;
+}

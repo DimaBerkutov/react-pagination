@@ -1,0 +1,57 @@
+@import 'src/scss/variables';
+@import 'src/scss/mixin';
+
+.slider {
+  @include flex-box(row, center, start);
+  width: 50%;
+
+  &__list {
+    @include flex-box(row, flex-start, center);
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+
+  &-button {
+    @include flex-box(row, center, center);
+    height: 3rem;
+    padding: 0 0.5rem;
+    background: transparent;
+    border: none;
+    margin-bottom: 20px;
+
+    &__text {
+      @include flex-box(row, center, center);
+      @include font-size(1.4rem);
+      height: 100%;
+      padding: 0 1rem;
+      background: $button-color;
+      border: 1px solid $white-color;
+      border-radius: 15px;
+      color: $white-color;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: $transition;
+
+      .is-selected & {
+        background: $button-active-color;
+        transition: $transition;
+      }
+    }
+
+    .is-hidden {
+      opacity: 0;
+    }
+  }
+}

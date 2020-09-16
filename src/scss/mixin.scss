@@ -1,0 +1,17 @@
+@import 'variables';
+
+@mixin flex-box($flex-direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin font-size($font-size) {
+  font-size: $font-size;
+  line-height: $font-size + 0.2rem;
+}
+
+@mixin transition($prop: '', $time: '.2s') {
+  transition: #{$prop} #{$time} ease-in-out;
+}

@@ -1,0 +1,9 @@
+@import 'scss/variables';
+
+.App{
+  background-color: $background-color;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
