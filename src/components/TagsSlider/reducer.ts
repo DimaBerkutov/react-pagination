@@ -9,7 +9,7 @@ interface TagsSliderReducer {
 }
 
 export const initialState: TagsSliderReducer = {
-  selectedIndex: 0,
+  selectedIndex: 1,
   slides: [],
 }
 

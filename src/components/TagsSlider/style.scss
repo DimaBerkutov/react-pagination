@@ -10,16 +10,17 @@
     overflow-x: auto;
 
     &::-webkit-scrollbar {
-      width: 10px;
+      height: 10px;
     }
+
     &::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      border-radius: 10px;
+      background: $white-color;
     }
+
     &::-webkit-scrollbar-thumb {
-      background: #888;
-    }
-    &::-webkit-scrollbar-thumb:hover {
-      background: #555;
+      border-radius: 10px;
+      background: $button-color;
     }
   }
 
@@ -29,7 +30,11 @@
     padding: 0 0.5rem;
     background: transparent;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+
+    &.is-hidden {
+      opacity: 0;
+    }
 
     &__text {
       @include flex-box(row, center, center);
@@ -48,10 +53,6 @@
         background: $button-active-color;
         transition: $transition;
       }
-    }
-
-    .is-hidden {
-      opacity: 0;
     }
   }
 }
