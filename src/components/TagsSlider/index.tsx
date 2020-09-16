@@ -103,7 +103,7 @@ export default function TagsSlider({ windowSize }: any): any {
 
     const slidesShowAr: boolean[] = slidesArr.map((elem: HTMLButtonElement): boolean => {
       const elemPos = elem.getBoundingClientRect();
-      return blockPos.x <= elemPos.x && elemPos.x + elemPos.width < blockPos.x + blockPos.width;
+      return blockPos.x <= elemPos.x && elemPos.x + elemPos.width <= blockPos.x + blockPos.width;
     });
     dispatch({ type: TYPES.SET_SLIDES, slides: slidesShowAr });
   }
