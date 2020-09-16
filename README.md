@@ -1,4 +1,4 @@
-https://dimaberkutov.github.io/react-pagination/
+See on https://dimaberkutov.github.io/react-pagination/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
